@@ -1,11 +1,10 @@
 import AppRoutes from "./Routes";
+import "./app.scss";
 
 function App() {
   return (
     <>
-      <div className="container mx-auto py-12 px-60 h-screen">
-        <AppRoutes />
-      </div>
+      <AppRoutes />
     </>
   );
 }

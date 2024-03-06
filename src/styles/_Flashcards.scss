@@ -1,0 +1,50 @@
+.flashcards {
+  width: 100%;
+  display: grid;
+  place-items: center center;
+  &__container {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    perspective: 400px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .card {
+    position: relative;
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    vertical-align: middle;
+    background: white;
+    margin: 2rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    text-wrap: wrap;
+    padding: 2em;
+    background-color: #124076;
+    color: white;
+    &:first-of-type {
+      margin-left: 15rem;
+    }
+    &:last-of-type {
+      margin-right: 15rem;
+    }
+    &__content {
+      height: 100%;
+      display: grid;
+      place-items: center;
+      font-size: x-large;
+      font-weight: 600;
+    }
+    &__flip {
+      transform: rotateY(180deg);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
